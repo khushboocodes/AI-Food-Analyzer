@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Primary Colors */
+    --color-primary: #7B9B7D; /* sage green */
+    --color-primary-foreground: #FFFFFF; /* white */
+    
+    /* Secondary Colors */
+    --color-secondary: #A8C4A2; /* lighter sage */
+    --color-secondary-foreground: #2D3A2E; /* dark green */
+    
+    /* Accent Colors */
+    --color-accent: #D4A574; /* warm amber */
+    --color-accent-foreground: #2D2419; /* dark brown */
+    
+    /* Background Colors */
+    --color-background: #F7F5F3; /* warm off-white */
+    --color-foreground: #2D2D2D; /* rich charcoal */
+    
+    /* Surface Colors */
+    --color-card: #FFFFFF; /* white */
+    --color-card-foreground: #2D2D2D; /* rich charcoal */
+    
+    --color-popover: #FFFFFF; /* white */
+    --color-popover-foreground: #2D2D2D; /* rich charcoal */
+    
+    /* Muted Colors */
+    --color-muted: #F7F5F3; /* warm off-white */
+    --color-muted-foreground: #6B7280; /* muted gray */
+    
+    /* Border & Input */
+    --color-border: rgba(123, 155, 125, 0.15); /* sage with opacity */
+    --color-input: rgba(123, 155, 125, 0.15); /* sage with opacity */
+    --color-ring: #7B9B7D; /* sage green */
+    
+    /* Status Colors */
+    --color-success: #5D8A5F; /* deep forest green */
+    --color-success-foreground: #FFFFFF; /* white */
+    
+    --color-warning: #C4915C; /* muted orange */
+    --color-warning-foreground: #FFFFFF; /* white */
+    
+    --color-error: #B85C5C; /* subdued red */
+    --color-error-foreground: #FFFFFF; /* white */
+    
+    --color-destructive: #B85C5C; /* subdued red */
+    --color-destructive-foreground: #FFFFFF; /* white */
+    
+    /* Typography */
+    --font-heading: 'Crimson Text', serif;
+    --font-body: 'Source Sans 3', sans-serif;
+    --font-caption: 'Nunito Sans', sans-serif;
+    --font-data: 'JetBrains Mono', monospace;
+    
+    /* Spacing Scale (8px base) */
+    --spacing-xs: 0.5rem; /* 8px */
+    --spacing-sm: 1rem; /* 16px */
+    --spacing-md: 1.5rem; /* 24px */
+    --spacing-lg: 2rem; /* 32px */
+    --spacing-xl: 5rem; /* 80px */
+    
+    /* Border Radius */
+    --radius-sm: 0.5rem; /* 8px */
+    --radius-md: 0.75rem; /* 12px */
+    --radius-lg: 1rem; /* 16px */
+    --radius-xl: 1.5rem; /* 24px */
+    --radius-pill: 1.5rem; /* 24px */
+    
+    /* Shadows */
+    --shadow-sm: 0 2px 4px rgba(123, 155, 125, 0.15);
+    --shadow-md: 0 4px 8px rgba(123, 155, 125, 0.18);
+    --shadow-lg: 0 8px 16px rgba(123, 155, 125, 0.2);
+    --shadow-xl: 0 20px 40px -8px rgba(123, 155, 125, 0.25);
+    
+    /* Transitions */
+    --transition-base: 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .dark {
+    /* Primary Colors */
+    --color-primary: #8BAD8D; /* lighter sage for dark mode */
+    --color-primary-foreground: #1A1B1A; /* dark background */
+    
+    /* Secondary Colors */
+    --color-secondary: #6B8B6D; /* darker sage */
+    --color-secondary-foreground: #E8EDE8; /* light green */
+    
+    /* Accent Colors */
+    --color-accent: #E0B888; /* lighter amber */
+    --color-accent-foreground: #1A1B1A; /* dark background */
+    
+    /* Background Colors */
+    --color-background: #1A1B1A; /* dark background */
+    --color-foreground: rgba(255, 255, 255, 0.88); /* 88% white */
+    
+    /* Surface Colors */
+    --color-card: #242624; /* elevated dark */
+    --color-card-foreground: rgba(255, 255, 255, 0.88); /* 88% white */
+    
+    --color-popover: #2E312E; /* highest elevation */
+    --color-popover-foreground: rgba(255, 255, 255, 0.88); /* 88% white */
+    
+    /* Muted Colors */
+    --color-muted: #242624; /* elevated dark */
+    --color-muted-foreground: rgba(255, 255, 255, 0.6); /* 60% white */
+    
+    /* Border & Input */
+    --color-border: rgba(139, 173, 141, 0.2); /* lighter sage with opacity */
+    --color-input: rgba(139, 173, 141, 0.2); /* lighter sage with opacity */
+    --color-ring: #8BAD8D; /* lighter sage */
+    
+    /* Status Colors */
+    --color-success: #6B9B6D; /* lighter forest green */
+    --color-success-foreground: #1A1B1A; /* dark background */
+    
+    --color-warning: #D4A574; /* same amber */
+    --color-warning-foreground: #1A1B1A; /* dark background */
+    
+    --color-error: #C87070; /* lighter red */
+    --color-error-foreground: #1A1B1A; /* dark background */
+    
+    --color-destructive: #C87070; /* lighter red */
+    --color-destructive-foreground: #1A1B1A; /* dark background */
+    
+    /* Shadows become glows */
+    --shadow-sm: 0 2px 4px rgba(139, 173, 141, 0.1);
+    --shadow-md: 0 4px 8px rgba(139, 173, 141, 0.12);
+    --shadow-lg: 0 8px 16px rgba(139, 173, 141, 0.15);
+    --shadow-xl: 0 20px 40px -8px rgba(139, 173, 141, 0.2);
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+
+  h1 {
+    font-size: 2.25rem;
+    line-height: 1.2;
+  }
+
+  h2 {
+    font-size: 1.875rem;
+    line-height: 1.25;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    line-height: 1.3;
+  }
+
+  h4 {
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+
+  h5 {
+    font-size: 1.125rem;
+    line-height: 1.5;
+  }
+
+  p {
+    max-width: 65ch;
+  }
+
+  @media (max-width: 768px) {
+    body {
+      font-size: 15px;
+    }
+
+    h1 {
+      font-size: 1.875rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    h3 {
+      font-size: 1.25rem;
+    }
+  }
+}
+
+@layer utilities {
+  .text-caption {
+    font-family: var(--font-caption);
+    font-size: 0.875rem;
+    line-height: 1.4;
+    letter-spacing: 0.025em;
+  }
+
+  .text-data {
+    font-family: var(--font-data);
+    font-feature-settings: 'tnum' on, 'lnum' on;
+  }
+
+  .transition-organic {
+    transition: all var(--transition-base);
+  }
+
+  .shadow-organic-sm {
+    box-shadow: var(--shadow-sm);
+  }
+
+  .shadow-organic-md {
+    box-shadow: var(--shadow-md);
+  }
+
+  .shadow-organic-lg {
+    box-shadow: var(--shadow-lg);
+  }
+
+  .shadow-organic-xl {
+    box-shadow: var(--shadow-xl);
+  }
+
+  .focus-ring {
+    @apply outline-none ring-2 ring-ring ring-offset-2 ring-offset-background;
+  }
+
+  .touch-target {
+    @apply min-h-[44px] min-w-[44px];
+  }
+
+  @keyframes pulse-gentle {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.6;
+    }
+  }
+
+  @keyframes wave-gentle {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-4px);
+    }
+  }
+
+  .animate-pulse-gentle {
+    animation: pulse-gentle 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .animate-wave-gentle {
+    animation: wave-gentle 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .content-card {
+    @apply bg-card text-card-foreground rounded-lg p-8 shadow-organic-md border border-border;
+  }
+
+  @media (max-width: 768px) {
+    .content-card {
+      @apply p-5;
+    }
+  }
+}
