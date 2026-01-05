@@ -89,7 +89,7 @@ This mirrors how an intelligent assistant would reason — not just retrieve dat
 ## 🚀 Live Prototype
 
 🔗 **Live Demo:**  
-https://ai-food-analyzer.vercel.app
+https://ai-foodanalyzer-git-main-khushboocodes-projects.vercel.app
 
 ---
 
